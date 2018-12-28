@@ -1,12 +1,14 @@
 function handleSubmit () {
+ 
     $('.js-get-dog').on('click', event => {
         event.preventDefault();
-        getPug();
+        let breed = $('.js-breed-input').val();
+        getPug(breed);
     })
 }
 
-function getPug () {
-    fetch ('https://dog.ceo/api/breed/pug/images/random')
+function getPug (breed) {
+    fetch (`https://dog.ceo/api/breed/${breed}/images/random`)
         .then(response => response.json())
         .then(responseJson => {
             if(responseJson.status != 'success') {
