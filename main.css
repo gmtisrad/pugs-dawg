@@ -1,0 +1,20 @@
+html {
+    box-sizing: border-box;
+}
+
+.content {
+    width: 420px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input[type='button'] {
+    width: 420px;
+    height: 100px;
+    background-color: lightblue;
+    border-radius: 50%;
+}
+
+img {
+    width: 100%;
+}
